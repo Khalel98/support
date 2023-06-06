@@ -19,10 +19,7 @@
       <div class="user-profile" id="user-profile">
         <div class="user-profile-content" id="user-profile-content">
           <div class="user-profile-img logo">
-            <img
-              src="https://randomuser.me/api/portraits/men/85.jpg"
-              alt="Vue"
-            />
+            <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="Vue" />
           </div>
           <span class="user-profile-name"> Айгерім М. </span>
         </div>
@@ -107,6 +104,36 @@
               class="sidebar__subitem"
               title="Профиль модератора"
               to="/users/moderator"
+            ></v-list-item>
+          </div>
+        </v-list-group>
+
+        <v-list-group>
+          <template v-slot:activator="{ props }">
+            <router-link to="/statistics" class="sidebar__group__link">
+              <v-list-item
+                class="sidebar__group"
+                v-bind="props"
+                prepend-icon="mdi mdi-chart-line"
+                title="Статистика"
+              ></v-list-item>
+            </router-link>
+          </template>
+          <div class="div" v-if="!rail">
+            <v-list-item
+              class="sidebar__subitem"
+              title="Статистика обращений"
+              to="/statistics/appeals"
+            ></v-list-item>
+            <v-list-item
+              class="sidebar__subitem"
+              title="Статистика пользователей"
+              to="/statistics/users"
+            ></v-list-item>
+            <v-list-item
+              class="sidebar__subitem"
+              title="Статистика модераторов"
+              to="/statistics/moderators"
             ></v-list-item>
           </div>
         </v-list-group>

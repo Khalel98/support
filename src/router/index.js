@@ -83,6 +83,25 @@ const routes = [
     path: '/action',
     component: () => import('../views/ActionView.vue'),
   },
+
+  {
+    path: '/statistics',
+    name: 'statistics',
+    component: () => import('../views/statistics/StatView.vue'),
+  },
+  {
+    path: '/statistics/appeals',
+    component: () => import('../views/statistics/AppealsStatView.vue'),
+  },
+  {
+    path: '/statistics/moderators',
+    component: () => import('../views/statistics/ModeratorsStatView.vue'),
+  },
+  {
+    path: '/statistics/users',
+    component: () => import('../views/statistics/UsersStatView.vue'),
+  },
+
   
 ]
 
